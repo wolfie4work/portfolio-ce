@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-concrete-50: #f8f8f8;
+  --color-concrete-100: #e8e8e8;
+  --color-concrete-200: #d4d4d4;
+  --color-concrete-300: #b0b0b0;
+  --color-concrete-400: #808080;
+  --color-concrete-500: #606060;
+  --color-concrete-600: #404040;
+  --color-concrete-700: #2a2a2a;
+  --color-concrete-800: #1a1a1a;
+  --color-concrete-900: #0d0d0d;
+  --color-orange: #FF6B00;
+  --color-orange-dark: #CC5500;
+  --color-orange-light: #FF8533;
+  --color-blueprint: #1B3A5C;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-concrete-50);
+  color: var(--color-concrete-900);
+}
+
+::selection {
+  background-color: var(--color-orange);
+  color: white;
+}
+
+/* Grid pattern background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.grid-bg-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blueprint grid */
+.blueprint-bg {
+  background-color: var(--color-blueprint);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-concrete-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-concrete-400);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange);
+}
+
+/* Crosshair cursor areas */
+.cursor-crosshair {
+  cursor: crosshair;
+}
